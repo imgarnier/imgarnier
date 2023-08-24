@@ -1,0 +1,426 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+  }
+
+  body {
+	background: rgb(0, 0, 0);
+	overflow: hidden; 
+	animation:fadeInImg 4s forwards;
+}
+@keyframes fadeInImg {
+0% {opacity:0%; filter:brightness(20%);}
+100% {opacity:100%; filter:brightness(100%);}
+}
+
+
+  #overlay {
+	z-index:1000;
+	background-color: rgb(43, 43, 43);
+	height:120%;
+	width:120%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	filter: brightness(0%);
+	transform: translate(-50%, -50%);
+	pointer-events: none;
+	opacity:20%;
+	}
+
+	.logo {
+		position: absolute;
+		top: 15%;
+		left: 9%;
+		transform: translate(-50%,-50%);
+	}
+	
+	#text-content {
+		transition: opacity 1s;
+	}
+
+	h1 {	
+		font-weight: 100;
+		font-family: 'Roboto Mono', monospace;
+		transition: opacity 1s;
+		color:#b0b0b0;
+		text-shadow: 0vh 0vh 2vh rgba(230, 230, 230, 0.186);
+		font-size:12vh;
+		letter-spacing: 0.5vh;
+		text-transform: uppercase;
+		text-align: center;
+	}
+
+.title {
+	position: absolute;
+	top: 28%;
+	left: 10%;
+	transform: translate(-50%,-50%);
+}
+
+h2 {	
+	font-family: 'Roboto Mono', monospace;
+	transition: opacity 1s;
+	color:#b0b0b0;
+	text-shadow: 0vh 0vh 2vh rgba(230, 230, 230, 0.186);
+	font-size:1.5vh;
+	font-weight: 500;
+	letter-spacing: 0.5vh;
+	text-transform: uppercase;
+	line-height: 3vh;
+	white-space: pre;
+}
+
+#txt {
+	z-index:10000;
+	position:absolute;
+	font-family: 'Roboto Mono', monospace;
+	transition: opacity 1s;
+	color:#b0b0b0;
+	text-shadow: 0vh 0vh 2vh rgba(230, 230, 230, 0.186);
+	font-size:1.5vh;
+	right:6vh;
+	font-weight: 500;
+	letter-spacing: 0.5vh;
+	text-transform: uppercase;
+	line-height: 3vh;
+}
+
+#hidden-content {
+	width:100%;
+	height:100vh;
+}
+
+#clock-overlay {
+	display:none;
+	background-color: rgb(28, 39, 42);
+	width:100%;
+	height:100%;
+	z-index: 2;
+	position: absolute;
+	opacity:0.8;
+	mix-blend-mode: color-dodge;
+	filter: brightness(110%) blur(2.5vh);
+	pointer-events: none;
+}
+
+
+#dontgo {
+	display: none;
+	width:100%;
+	height:100%;
+}
+
+#clock-overlay-two {
+	opacity:1;
+	font-family: 'Roboto Mono', monospace;
+	font-weight: 100;
+	text-transform: uppercase;
+	letter-spacing: 0.2vh;
+	font-size:4vh;
+	line-height: 5vh;
+	color:rgb(80, 240, 117);
+	position: absolute;
+	top:53%;
+	left:50%;
+	transform:translate(-50%, -50%);
+	z-index: 10000;
+	pointer-events: none;
+	animation: dontgofadeout 5s forwards;
+}
+@keyframes dontgofadeout {
+	0% {opacity:0%;}
+	49% {opacity:0%;}
+	50% {opacity:100%;}
+	95% {opacity:100%;}
+	}
+
+
+#clock-overlay-three {
+	opacity:1;
+	background-color: rgb(56, 8, 22);
+	position: absolute;
+	width:100%;
+	height:100%;
+	top:50%;
+	left:50%;
+	transform:translate(-50%, -50%);
+	mix-blend-mode:difference;
+	z-index: 9999;
+	pointer-events: none;
+}
+
+#clock-overlay-four {
+	opacity:1;
+	background-color: rgb(54, 6, 74);
+	position: absolute;
+	width:100%;
+	height:100%;
+	top:50%;
+	left:50%;
+	transform:translate(-50%, -50%);
+	z-index: 9999;
+	mix-blend-mode:difference;
+	pointer-events: none;
+}
+
+#clock-overlay-five {
+	opacity:0;
+	background-color: rgb(9, 23, 6);
+	position: absolute;
+	width:100%;
+	height:100%;
+	top:50%;
+	left:50%;
+	transform:translate(-50%, -50%);
+	z-index: 1;
+	pointer-events: none;
+	animation: dontgofadeout 5s forwards;
+}
+@keyframes dontgofadeout {
+	0% {opacity:0%;}
+	49% {opacity:0%;}
+	50% {opacity:100%;}
+	95% {opacity:100%;}
+	}
+
+#boat-song {
+	display:none;
+	padding:1vh 2vh 1vh 2vh;
+	position: absolute;
+	top:91%;
+	left:50%;
+	transform:translate(-50%, -50%);
+	z-index: 10;
+	font-family: 'Roboto Mono', monospace;
+	font-size:2.1vh;
+	background-color:rgba(109, 109, 109, 0);
+	border:1px solid #c7c7c7;
+	color:#b0b0b0;
+	transition: 0.2s;
+	letter-spacing: 0.1vh;
+}
+
+#boat-song:hover {
+	cursor:pointer;
+	background-color:rgb(137, 137, 137);
+	color:#cacaca;
+	transition:0.2s;
+}
+
+
+  .container {
+	width:100%;
+	height:100vh;
+	background-color: rgb(0, 0, 0);
+  }
+  
+#rgbKineticSlider {
+  min-width: 85%; 
+  min-height: 85%; 
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  animation:fadeInImg 4s forwards;
+}
+@keyframes fadeInImg {
+0% {opacity:0%; filter:brightness(20%);}
+100% {opacity:100%; filter:brightness(100%);}
+}
+
+#myVideo {
+	z-index:0;
+	display:none;
+	width: 100%; 
+	height: 0 auto; 
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	}
+
+		  #password-content {
+			position: absolute;
+			top: 78%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+		}
+		
+		#f1 {
+			font-family: 'Roboto Mono', monospace;
+			border:none;
+			padding-top:2vh;
+			transition: opacity 1s;
+			text-shadow: 0vh 0vh 2vh rgba(230, 230, 230, 0.186);
+			font-size:1.7vh;
+			letter-spacing: 0.5vh;
+			width:100%;
+		}
+
+		  fieldset {
+			color: #c7c7c7;
+			text-align: center;
+			width: 15vw;
+			padding:3vh;
+		  }
+		
+		  legend {
+			letter-spacing: 0.2vh;
+			padding: 0 10px;
+		  }
+		
+		  #pswd {
+			background-color:rgba(0, 0, 0, 0);
+			border:1px solid #c7c7c7;
+			color:#b0b0b0;
+			border-radius:0.3vh;
+			padding:0vh 1vh 0vh 1vh;
+			font-size:2.8vh;
+			height:3.4vh;
+			width:25vh;
+		}
+		
+		#CorrectPswd {
+		  display:none;
+		  font-size:1.6vh;
+		  color:#86ff51;
+		  margin-top:-21px;
+		  text-transform: uppercase;
+		  animation: blink-animation 1s steps(5, start) 3;
+		  -webkit-animation: blink-animation 1s steps(5, start) 3;
+		}
+		@keyframes blink-animation {
+		  to {
+			visibility: hidden;
+		  }
+		}
+		@-webkit-keyframes blink-animation {
+		  to {
+			visibility: hidden;
+		  }
+		}
+		
+		#WrongPasswordInput {
+		  display:none;
+		  font-weight:500;
+		  font-size:1.7vh;
+		  letter-spacing: 0.2vh;
+		  text-transform: uppercase;
+		  margin-top:8vh;
+		  position:absolute;
+		  width:100%;
+		  top:45%;
+		  left:50%;
+		  transform:translate(-50%, -50%);
+		  color:#de0f27;
+		  animation: background-fade 4s forwards;
+		}
+		
+		@keyframes background-fade {
+			0% {
+			 opacity: 100%;
+			}
+			95% {
+				opacity: 100%;
+			   }
+			100% {
+				opacity: 0%;
+			}
+		  }
+		  
+
+		  #myBtn {
+			display: none;
+			padding:1vh;
+			font-size:2.1vh;
+			right:-8vh;
+			top:4vh;
+			position:relative;
+			background-color: #4caf4f00;
+			border:1px solid #c7c7c7;
+			color:#b0b0b0;
+			text-align: center;
+			text-decoration: none;
+			cursor: pointer;
+		}
+		#myBtn:hover {
+			background-color: #b0b0b0;
+			color:#141414;
+			transition:0.5;
+		}
+
+
+		
+		/* Hides the Save Password Key Icon on Safari */
+		input[type=password]::-webkit-contacts-auto-fill-button,
+		input[type=password]::-webkit-credentials-auto-fill-button {
+		   visibility: hidden;
+		   display: none !important;
+		   pointer-events: none;
+		   height: 0;
+		   width: 0;
+		   margin: 0;
+		}
+
+
+@media only screen and (max-width: 600px) {
+	#text-content {
+		display:none;
+	}		
+  }
+
+@media only screen and (max-width: 600px) {
+	body {
+	overflow:hidden;
+	height:100vh;
+	width:100%;
+	}		
+  }
+
+
+		@media only screen and (max-width: 2600px) {
+			#myBtn {
+				display: block;
+				padding:1vh;
+				font-size:2.1vh;
+				right:-8vh;
+				top:4vh;
+				position:relative;
+				background-color: #4caf4f00;
+				border:1px solid #c7c7c7;
+				color:#b0b0b0;
+				text-align: center;
+				text-decoration: none;
+				cursor: pointer;
+			}
+		  }
+
+		@media only screen and (max-width: 600px) {
+			#myVideo {
+				overflow:hidden;
+				z-index:0;
+				display:none;
+				width: 300%; 
+				height: 0 auto; 
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%,-50%);
+				}
+		  }
+
+		  @media only screen and (max-width: 600px) {
+			#password-content {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%,-50%);
+				font-size:20px;
+			}
+		  }

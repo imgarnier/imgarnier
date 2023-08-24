@@ -1,0 +1,22 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<title>Cats page</title> 
+
+<!--  Redirects Page to homepage unless you use the password  //-->
+<script src="js/password.js"></script>
+<script>
+var value = localStorage.getItem('my_flag');
+if (value != "visited") {
+    window.location = "index.html";
+}
+localStorage.removeItem("my_flag");
+</script>
+
+</head>
+
+
+
+<body> <h1>Welcome!! you entered the CATS password</h1> 
+</body> 
+</html>
