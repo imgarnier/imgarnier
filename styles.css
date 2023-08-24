@@ -1,0 +1,12 @@
+body {
+	color: white;
+	background-color: black;
+	box-sizing: border-box;
+	text-align: center;
+}
+
+
+.thumbnail, .thumbnail2, .thumbnail3, .thumbnail4, .thumbnail5, .thumbnail6,
+.thumbnail7, .thumbnail8 {
+	width:20%;
+}
