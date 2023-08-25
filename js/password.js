@@ -36,6 +36,19 @@ function checkPswd() {
       }
       setTimeout(delay, 3000);
 
+      const passwordcontent = document.getElementById("password-content");
+      function delay() {
+        passwordcontent.style.display = "none";
+      }
+      setTimeout(delay, 4000);
+        
+      const textcontent = document.getElementById("text-content");
+      function delay() {
+         textcontent.style.display = "none";
+      }
+      setTimeout(delay, 4000);
+
+        
 
        video.addEventListener('ended',function() {window.location = `${passMatch.page}.html`;
     
@@ -60,7 +73,8 @@ function checkPswd() {
         document.getElementById("clock-overlay-five").style.opacity = "1";
         document.getElementById("dontgo").style = 'display:block';
         document.getElementById("boat-song").style = 'display:none';
-
+        document.getElementById("rgbKineticSlider").style = 'display:none';
+    
 
         
         
