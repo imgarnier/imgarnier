@@ -25,7 +25,7 @@ function checkPswd() {
 
       const video = document.getElementById("myVideo");
       function delay() {
-        video.style.display = "block";
+        video.style.display = "none";
         myVideo.play();
       }
       setTimeout(delay, 3000);
