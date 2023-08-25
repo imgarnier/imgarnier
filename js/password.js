@@ -23,12 +23,6 @@ function checkPswd() {
     if (passMatch ) {
       console.log(`Redirecting to: "${passMatch.page}"`);
 
-      const slider = document.getElementById("rgbKineticSlider");
-      function delay() {
-        slider.style.display = "none";
-      }
-      setTimeout(delay, 3000);
-
       const video = document.getElementById("myVideo");
       function delay() {
         video.style.display = "block";
@@ -36,18 +30,24 @@ function checkPswd() {
       }
       setTimeout(delay, 3000);
 
-      const passwordcontent = document.getElementById("password-content");
-      function delay() {
-        passwordcontent.style.display = "none";
+      const slider = document.getElementById("rgbKineticSlider");
+      function delay1() {
+        slider.style.display = "none";
       }
-      setTimeout(delay, 4000);
+      setTimeout(delay1, 4000);
+
+      const password = document.getElementById("password-content");
+      function delay2() {
+        password.style.display = "none";
+      }
+      setTimeout(delay2, 4000);
         
       const textcontent = document.getElementById("text-content");
-      function delay() {
-         textcontent.style.display = "none";
+      function delay3() {
+        textcontent.style.display = "none";
       }
-      setTimeout(delay, 4000);
-   
+      setTimeout(delay3, 4000);
+        
 
        video.addEventListener('ended',function() {window.location = `${passMatch.page}.html`;
     
